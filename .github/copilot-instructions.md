@@ -9,7 +9,8 @@
 ## 編集してよい場所
 
 - 名刺の実装は `starter/index.html` `starter/style.css` `starter/script.js` だけを更新する
-- 写真は `starter/assets/` に置き、相対パスで読む
+- 写真は `starter/assets/` に置き、相対パスで読む。複数枚ならカルーセル可
+- リンクは GitHub / X を優先して勧める
 - 要件のメモは `starter/REQUIREMENTS.md` に書いてよい
 
 ## 編集しない場所
