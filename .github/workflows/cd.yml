@@ -1,0 +1,41 @@
+name: CD
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: ["main", "reference"]
+    paths:
+      - "starter/**"
+      - ".github/workflows/cd.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: cd-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Copy starter to docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copy starter into docs
+        run: |
+          rm -rf docs
+          mkdir -p docs
+          rsync -a --exclude '*.md' --exclude '.gitkeep' starter/ docs/
+          touch docs/.nojekyll
+
+      - name: Commit and push docs/
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "docs"
+          default_author: github_actions
+          message: "chore: starter を docs に反映 [skip actions]"
+          pull: "--rebase --autostash"
