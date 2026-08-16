@@ -3,53 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Web名刺</title>
-    <meta name="description" content="Your Name のWeb名刺です。" />
+    <title>山田太郎 | Web名刺</title>
+    <meta name="description" content="山田太郎のWeb名刺です。" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main class="card">
       <header class="profile">
-        <!-- 写真を使う場合は下の div を消して、img のコメントを外してください -->
-        <div class="avatar" aria-hidden="true">YN</div>
-        <!-- <img class="avatar-img" src="./assets/photo.jpg" alt="Your Name の写真" /> -->
-
-        <p class="kicker">Web Card</p>
-        <h1>Your Name</h1>
-        <p class="role">肩書き / 所属</p>
-        <p class="tagline">ここに短いキャッチコピーを書きます。</p>
+        <div class="profile-topline">
+          <p class="kicker">Web Card / 2026</p>
+          <span class="index-mark">01—03</span>
+        </div>
+        <div class="carousel" aria-label="山田太郎の写真">
+          <div class="carousel-track">
+            <img class="carousel-slide is-active" src="./assets/266370.jpg" alt="山田太郎の活動写真 1" />
+            <img class="carousel-slide" src="./assets/bar.png" alt="山田太郎の活動写真 2" />
+            <img class="carousel-slide" src="./assets/cafe.JPG" alt="山田太郎の活動写真 3" />
+          </div>
+          <button class="carousel-button carousel-button-prev" type="button" aria-label="前の写真">←</button>
+          <button class="carousel-button carousel-button-next" type="button" aria-label="次の写真">→</button>
+          <div class="carousel-dots" aria-label="写真を選択"></div>
+        </div>
+        <p class="eyebrow">Front-end engineer / Community host</p>
+        <h1>山田太郎</h1>
+        <p class="name-en">YAMADA TARO</p>
+        <p class="role">新卒2年目のフロントエンドエンジニア<br />赤羽ゆるもく会 主催</p>
+        <p class="tagline">つくることで、毎日を少しだけ面白く。</p>
       </header>
 
       <section class="section">
-        <h2>About</h2>
-        <p>
-          自己紹介文をここに書きます。いま取り組んでいること、大切にしていること、
-          話したいテーマなどを2〜4文でまとめると読みやすいです。
-        </p>
+        <div class="section-heading"><span>01</span><h2>About</h2></div>
+        <p>フロントエンドを中心に、使う人の体験まで考えたWebサービスを作っています。個人開発やコミュニティ運営を通して、技術と人が交わる場を増やしています。</p>
       </section>
 
       <section class="section">
-        <h2>Highlights</h2>
+        <div class="section-heading"><span>02</span><h2>Highlights</h2></div>
         <ul class="highlights">
           <li>
-            <strong>実績タイトル</strong>
-            <span>どんなことをしたか、一行で。</span>
+            <strong>伏せ太郎</strong>
+            <span>個人開発でサービスを制作・公開</span>
           </li>
           <li>
-            <strong>実績タイトル</strong>
-            <span>数字があると伝わりやすいです。</span>
+            <strong>赤羽ゆるもく会</strong>
+            <span>技術と人が交わる勉強会を主催</span>
           </li>
           <li>
-            <strong>実績タイトル</strong>
-            <span>イベントで話したいことを置くのもおすすめです。</span>
+            <strong>Conference / LT</strong>
+            <span>カンファレンスやLTに複数登壇</span>
           </li>
         </ul>
       </section>
 
       <nav class="links" aria-label="リンク">
-        <a class="link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="link" href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
-        <a class="link" href="#" data-copy="you@example.com">Email</a>
+        <a class="link" href="https://fusely-app.pages.dev/" target="_blank" rel="noopener noreferrer"><span>伏せ太郎</span><span>↗</span></a>
+        <a class="link" href="https://illionillion-slides.pages.dev/" target="_blank" rel="noopener noreferrer"><span>Slides</span><span>↗</span></a>
       </nav>
     </main>
 
