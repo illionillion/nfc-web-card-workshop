@@ -20,9 +20,10 @@ AIで自己紹介サイトを作り、GitHub Pagesで公開し、NFCカードに
 上から順に進めてください。各ステップの詳細は `guide/` にあります。
 
 1. [事前準備](./guide/01-事前準備.md) — ZIPで入手、VS Code、NFCアプリ
-2. [サイト制作](./guide/02-サイト制作.md) — `/web-card` で要件を固めて `starter/` を実装
-3. [GitHub公開](./guide/03-GitHub公開.md) — 新しい公開リポジトリを作り、Pages で公開
-4. [NFC書き込み](./guide/04-NFC書き込み.md) — 公開URLをカードに書き込む
+2. [自己紹介メモ](./guide/00-自己紹介メモ.md) — 3分で素材を書き出す
+3. [サイト制作](./guide/02-サイト制作.md) — `/web-card` でメモを渡して実装
+4. [GitHub公開](./guide/03-GitHub公開.md) — 新しい公開リポジトリを作り、Pages で公開
+5. [NFC書き込み](./guide/04-NFC書き込み.md) — 公開URLをカードに書き込む
 
 詰まったら近くのサポートに声をかけてください。細かい見た目の崩れは、あとから自分で直して大丈夫です。
 
@@ -46,12 +47,18 @@ nfc-web-card-workshop/
 1. このリポジトリを ZIP でダウンロードして解凍する
 2. VS Code でそのフォルダを開く
 3. `starter/index.html` をブラウザで開いて、初期状態を確認する
-4. Copilot チャット（Agent）で `/web-card` と打つ
+4. [guide/00-自己紹介メモ.md](./guide/00-自己紹介メモ.md) を開いて3分で埋める
+5. Copilot チャット（Agent）でメモを貼りながら `/web-card` を送る
 
-   質問に答えて要件を固める。おまかせでよい項目は「それで」と返せば進む。
-   確認が取れるまで実装は始まらない。
+   ```
+   /web-card
 
-5. 公開と書き込みは [guide/03-GitHub公開.md](./guide/03-GitHub公開.md) と [guide/04-NFC書き込み.md](./guide/04-NFC書き込み.md) へ
+   ---（メモの中身）---
+   ```
+
+   書いてある項目は確認だけ、空欄は質問される。確認が取れるまで実装は始まらない。
+
+6. 公開と書き込みは [guide/03-GitHub公開.md](./guide/03-GitHub公開.md) と [guide/04-NFC書き込み.md](./guide/04-NFC書き込み.md) へ
 
 公開すると、GitHub Actions が `starter/` を `docs/` にコピーします。GitHub Pages は `docs/` だけを出すので、完成例や手順書はサイトに含まれません。
 
