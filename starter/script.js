@@ -1,56 +1,36 @@
-const slides = [...document.querySelectorAll(".carousel-slide")];
-const dots = document.querySelector(".carousel-dots");
-const previousButton = document.querySelector(".carousel-button-prev");
-const nextButton = document.querySelector(".carousel-button-next");
-let currentSlide = 0;
+const slides = Array.from(document.querySelectorAll('.slide'));
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let activeIndex = 0;
+let autoTimerId = null;
+
+function scheduleAutoSlide() {
+  if (autoTimerId) {
+    window.clearTimeout(autoTimerId);
+  }
+
+  autoTimerId = window.setTimeout(() => {
+    showSlide(activeIndex + 1);
+  }, 4000);
+}
 
 function showSlide(index) {
-  currentSlide = (index + slides.length) % slides.length;
-  slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === currentSlide));
-  document.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
-    dot.classList.toggle("is-active", dotIndex === currentSlide);
-    dot.setAttribute("aria-current", dotIndex === currentSlide ? "true" : "false");
+  activeIndex = (index + slides.length) % slides.length;
+
+  slides.forEach((slide, currentIndex) => {
+    slide.classList.toggle('active', currentIndex === activeIndex);
   });
+
+  scheduleAutoSlide();
 }
 
-slides.forEach((_, slideIndex) => {
-  const dot = document.createElement("button");
-  dot.className = "carousel-dot";
-  dot.type = "button";
-  dot.setAttribute("aria-label", `${slideIndex + 1}枚目の写真を表示`);
-  dot.addEventListener("click", () => showSlide(slideIndex));
-  dots.append(dot);
+prevButton.addEventListener('click', () => {
+  showSlide(activeIndex - 1);
 });
 
-previousButton.addEventListener("click", () => showSlide(currentSlide - 1));
-nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
-showSlide(0);
-
-const hint = document.querySelector("#copy-hint");
-
-document.querySelectorAll("[data-copy]").forEach((element) => {
-  element.addEventListener("click", async (event) => {
-    event.preventDefault();
-
-    const value = element.getAttribute("data-copy");
-    if (!value) return;
-
-    try {
-      await navigator.clipboard.writeText(value);
-      showHint("コピーしました");
-    } catch {
-      showHint(value);
-    }
-  });
+nextButton.addEventListener('click', () => {
+  showSlide(activeIndex + 1);
 });
 
-function showHint(message) {
-  if (!hint) return;
-
-  hint.textContent = message;
-  hint.hidden = false;
-  window.clearTimeout(showHint.timer);
-  showHint.timer = window.setTimeout(() => {
-    hint.hidden = true;
-  }, 1800);
-}
+scheduleAutoSlide();

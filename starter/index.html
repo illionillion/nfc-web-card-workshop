@@ -3,64 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>山田太郎 | Web名刺</title>
-    <meta name="description" content="山田太郎のWeb名刺です。" />
+    <title>田中太郎 | Web名刺</title>
+    <meta
+      name="description"
+      content="田中太郎のWeb名刺です。フロントエンドエンジニア / 個人開発 / OSS。"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main class="card">
-      <header class="profile">
-        <div class="profile-topline">
-          <p class="kicker">Web Card / 2026</p>
-          <span class="index-mark">01—03</span>
-        </div>
-        <div class="carousel" aria-label="山田太郎の写真">
-          <div class="carousel-track">
-            <img class="carousel-slide is-active" src="./assets/266370.jpg" alt="山田太郎の活動写真 1" />
-            <img class="carousel-slide" src="./assets/bar.png" alt="山田太郎の活動写真 2" />
-            <img class="carousel-slide" src="./assets/cafe.JPG" alt="山田太郎の活動写真 3" />
+    <div class="page-shell">
+      <main class="card" aria-label="田中太郎のWeb名刺">
+        <header class="hero">
+          <div class="carousel" aria-label="プロフィール写真のスライドショー">
+            <button class="nav prev" type="button" aria-label="前の写真">‹</button>
+            <div class="slides">
+              <figure class="slide active">
+                <img src="./assets/266370.jpg" alt="田中太郎の写真" />
+              </figure>
+              <figure class="slide">
+                <img src="./assets/bar.png" alt="バーなどの活動写真" />
+              </figure>
+              <figure class="slide">
+                <img src="./assets/cafe.JPG" alt="カフェでの写真" />
+              </figure>
+            </div>
+            <button class="nav next" type="button" aria-label="次の写真">›</button>
           </div>
-          <button class="carousel-button carousel-button-prev" type="button" aria-label="前の写真">←</button>
-          <button class="carousel-button carousel-button-next" type="button" aria-label="次の写真">→</button>
-          <div class="carousel-dots" aria-label="写真を選択"></div>
-        </div>
-        <p class="eyebrow">Front-end engineer / Community host</p>
-        <h1>山田太郎</h1>
-        <p class="name-en">YAMADA TARO</p>
-        <p class="role">新卒2年目のフロントエンドエンジニア<br />赤羽ゆるもく会 主催</p>
-        <p class="tagline">つくることで、毎日を少しだけ面白く。</p>
-      </header>
 
-      <section class="section">
-        <div class="section-heading"><span>01</span><h2>About</h2></div>
-        <p>フロントエンドを中心に、使う人の体験まで考えたWebサービスを作っています。個人開発やコミュニティ運営を通して、技術と人が交わる場を増やしています。</p>
-      </section>
+          <div class="hero-copy">
+            <p class="eyebrow">Front-end Engineer / Individual Dev / OSS</p>
+            <h1>
+              田中太郎
+              <span>Tanaka Taro</span>
+            </h1>
+            <p class="tagline">UXをコードで形にする</p>
+          </div>
+        </header>
 
-      <section class="section">
-        <div class="section-heading"><span>02</span><h2>Highlights</h2></div>
-        <ul class="highlights">
-          <li>
-            <strong>伏せ太郎</strong>
-            <span>個人開発でサービスを制作・公開</span>
-          </li>
-          <li>
-            <strong>赤羽ゆるもく会</strong>
-            <span>技術と人が交わる勉強会を主催</span>
-          </li>
-          <li>
-            <strong>Conference / LT</strong>
-            <span>カンファレンスやLTに複数登壇</span>
-          </li>
-        </ul>
-      </section>
+        <section class="panel intro">
+          <div class="section-label">About</div>
+          <p>
+            UI/UXを意識したフロントエンド開発を得意とし、個人開発とOSSの両面で価値をつくっています。
+            ユーザーに届く体験を、見た目と実装の両面から丁寧に設計し、伝わる体験を届けます。
+          </p>
+        </section>
 
-      <nav class="links" aria-label="リンク">
-        <a class="link" href="https://fusely-app.pages.dev/" target="_blank" rel="noopener noreferrer"><span>伏せ太郎</span><span>↗</span></a>
-        <a class="link" href="https://illionillion-slides.pages.dev/" target="_blank" rel="noopener noreferrer"><span>Slides</span><span>↗</span></a>
-      </nav>
-    </main>
+        <section class="panel works">
+          <div class="section-label">Works</div>
+          <ul class="project-list">
+            <li>
+              <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">
+                Fusely
+              </a>
+              <span>個人開発サービス</span>
+            </li>
+            <li>
+              <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">
+                Slides
+              </a>
+              <span>技術発表・資料</span>
+            </li>
+            <li>
+              <span class="plain">OSS / 個人開発</span>
+              <span>実装と改善を継続</span>
+            </li>
+          </ul>
+        </section>
 
-    <p class="hint" id="copy-hint" hidden>コピーしました</p>
+        <section class="panel links">
+          <div class="section-label">Links</div>
+          <div class="link-grid">
+            <a href="https://github.com/illionillion" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a href="https://x.com/Sei_engineer" target="_blank" rel="noreferrer noopener">X</a>
+            <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">Slides</a>
+            <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">Fusely</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
