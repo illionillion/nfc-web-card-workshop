@@ -3,85 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>田中太郎 | Web名刺</title>
-    <meta
-      name="description"
-      content="田中太郎のWeb名刺です。フロントエンドエンジニア / 個人開発 / OSS。"
-    />
-    <link rel="stylesheet" href="./style.css" />
+    <title>Web名刺 サンプル一覧</title>
+    <style>
+      :root {
+        --bg: #0f1117;
+        --card: #1a1d27;
+        --text: #e8eaf0;
+        --muted: #8b90a0;
+        --line: rgba(232, 234, 240, 0.1);
+        --accent: #7c8cf8;
+        --font: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        padding: 48px 24px 64px;
+        color: var(--text);
+        background: var(--bg);
+        font-family: var(--font);
+      }
+
+      header {
+        max-width: 640px;
+        margin: 0 auto 48px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--card);
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s;
+      }
+
+      .item:hover {
+        border-color: var(--accent);
+      }
+
+      .item-name {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .item-meta {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .item-arrow {
+        margin-top: auto;
+        padding-top: 12px;
+        color: var(--accent);
+        font-size: 13px;
+      }
+    </style>
   </head>
   <body>
-    <div class="page-shell">
-      <main class="card" aria-label="田中太郎のWeb名刺">
-        <header class="hero">
-          <div class="carousel" aria-label="プロフィール写真のスライドショー">
-            <button class="nav prev" type="button" aria-label="前の写真">‹</button>
-            <div class="slides">
-              <figure class="slide active">
-                <img src="./assets/266370.jpg" alt="田中太郎の写真" />
-              </figure>
-              <figure class="slide">
-                <img src="./assets/bar.png" alt="バーなどの活動写真" />
-              </figure>
-              <figure class="slide">
-                <img src="./assets/cafe.JPG" alt="カフェでの写真" />
-              </figure>
-            </div>
-            <button class="nav next" type="button" aria-label="次の写真">›</button>
-          </div>
+    <header>
+      <h1>Web名刺 サンプル一覧</h1>
+      <p class="desc">
+        NFC Web名刺ワークショップの完成例です。<br />
+        各カードをタップして名刺を確認できます。
+      </p>
+    </header>
 
-          <div class="hero-copy">
-            <p class="eyebrow">Front-end Engineer / Individual Dev / OSS</p>
-            <h1>
-              田中太郎
-              <span>Tanaka Taro</span>
-            </h1>
-            <p class="tagline">UXをコードで形にする</p>
-          </div>
-        </header>
-
-        <section class="panel intro">
-          <div class="section-label">About</div>
-          <p>
-            UI/UXを意識したフロントエンド開発を得意とし、個人開発とOSSの両面で価値をつくっています。
-            ユーザーに届く体験を、見た目と実装の両面から丁寧に設計し、伝わる体験を届けます。
-          </p>
-        </section>
-
-        <section class="panel works">
-          <div class="section-label">Works</div>
-          <ul class="project-list">
-            <li>
-              <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">
-                Fusely
-              </a>
-              <span>個人開発サービス</span>
-            </li>
-            <li>
-              <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">
-                Slides
-              </a>
-              <span>技術発表・資料</span>
-            </li>
-            <li>
-              <span class="plain">OSS / 個人開発</span>
-              <span>実装と改善を継続</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="panel links">
-          <div class="section-label">Links</div>
-          <div class="link-grid">
-            <a href="https://github.com/illionillion" target="_blank" rel="noreferrer noopener">GitHub</a>
-            <a href="https://x.com/Sei_engineer" target="_blank" rel="noreferrer noopener">X</a>
-            <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">Slides</a>
-            <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">Fusely</a>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="./script.js"></script>
+    <ul class="grid" role="list">
+      <li>
+        <a class="item" href="./illionillion/">
+          <span class="item-name">illionillion</span>
+          <span class="item-meta">フロントエンドエンジニア<br />ダーク / 写真カルーセル / 動き多め</span>
+          <span class="item-arrow">名刺を見る →</span>
+        </a>
+      </li>
+    </ul>
   </body>
 </html>

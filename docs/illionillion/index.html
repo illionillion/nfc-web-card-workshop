@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>田中太郎 | Web名刺</title>
+    <meta
+      name="description"
+      content="田中太郎のWeb名刺です。フロントエンドエンジニア / 個人開発 / OSS。"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="card" aria-label="田中太郎のWeb名刺">
+        <header class="hero">
+          <div class="carousel" aria-label="プロフィール写真のスライドショー">
+            <button class="nav prev" type="button" aria-label="前の写真">‹</button>
+            <div class="slides">
+              <figure class="slide active">
+                <img src="./assets/266370.jpg" alt="田中太郎の写真" />
+              </figure>
+              <figure class="slide">
+                <img src="./assets/bar.png" alt="バーなどの活動写真" />
+              </figure>
+              <figure class="slide">
+                <img src="./assets/cafe.JPG" alt="カフェでの写真" />
+              </figure>
+            </div>
+            <button class="nav next" type="button" aria-label="次の写真">›</button>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow">Front-end Engineer / Individual Dev / OSS</p>
+            <h1>
+              田中太郎
+              <span>Tanaka Taro</span>
+            </h1>
+            <p class="tagline">UXをコードで形にする</p>
+          </div>
+        </header>
+
+        <section class="panel intro">
+          <div class="section-label">About</div>
+          <p>
+            UI/UXを意識したフロントエンド開発を得意とし、個人開発とOSSの両面で価値をつくっています。
+            ユーザーに届く体験を、見た目と実装の両面から丁寧に設計し、伝わる体験を届けます。
+          </p>
+        </section>
+
+        <section class="panel works">
+          <div class="section-label">Works</div>
+          <ul class="project-list">
+            <li>
+              <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">
+                Fusely
+              </a>
+              <span>個人開発サービス</span>
+            </li>
+            <li>
+              <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">
+                Slides
+              </a>
+              <span>技術発表・資料</span>
+            </li>
+            <li>
+              <span class="plain">OSS / 個人開発</span>
+              <span>実装と改善を継続</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel links">
+          <div class="section-label">Links</div>
+          <div class="link-grid">
+            <a href="https://github.com/illionillion" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a href="https://x.com/Sei_engineer" target="_blank" rel="noreferrer noopener">X</a>
+            <a href="https://illionillion-slides.pages.dev/" target="_blank" rel="noreferrer noopener">Slides</a>
+            <a href="https://fusely-app.pages.dev/" target="_blank" rel="noreferrer noopener">Fusely</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
