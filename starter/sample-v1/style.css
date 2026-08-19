@@ -1,0 +1,191 @@
+:root {
+  --bg: #eaf1f8;
+  --card: #ffffff;
+  --text: #10233f;
+  --muted: #607089;
+  --line: #d8e2ee;
+  --accent: #145cff;
+  --accent-soft: #e4edff;
+  --shadow: 0 28px 80px rgba(23, 57, 102, 0.16);
+  --radius: 4px;
+  --font: "Avenir Next", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 36px 16px;
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(20, 92, 255, 0.08), transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0, transparent 79px, rgba(16, 35, 63, 0.035) 80px), var(--bg);
+  font-family: var(--font);
+}
+
+.card {
+  width: min(520px, 100%);
+  padding: 34px 34px 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.profile { text-align: left; }
+
+.profile-topline { display: flex; justify-content: space-between; align-items: center; }
+.index-mark { color: var(--muted); font-size: 11px; letter-spacing: 0.12em; }
+
+.carousel { position: relative; overflow: hidden; margin: 24px 0 26px; aspect-ratio: 4 / 5; background: var(--accent-soft); }
+.carousel-track, .carousel-slide { width: 100%; height: 100%; }
+.carousel-slide { display: none; object-fit: cover; }
+.carousel-slide.is-active { display: block; animation: reveal 500ms ease both; }
+.carousel-button { position: absolute; top: 50%; width: 34px; height: 34px; border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 50%; color: #fff; background: rgba(16, 35, 63, 0.4); cursor: pointer; transform: translateY(-50%); }
+.carousel-button:hover, .carousel-button:focus-visible { background: var(--accent); outline: none; }
+.carousel-button-prev { left: 12px; }
+.carousel-button-next { right: 12px; }
+.carousel-dots { position: absolute; right: 16px; bottom: 14px; display: flex; gap: 6px; }
+.carousel-dot { width: 7px; height: 7px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: transparent; cursor: pointer; }
+.carousel-dot.is-active { background: #fff; }
+
+.eyebrow, .name-en { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.eyebrow { margin-bottom: 10px; }
+
+.kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(34px, 9vw, 54px);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+.name-en { margin-top: 4px; color: var(--muted); font-size: 10px; }
+
+.role,
+.tagline,
+.section p,
+.highlights span,
+.link {
+  line-height: 1.7;
+}
+
+.role {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tagline {
+  margin-top: 18px;
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+.section-heading { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.section-heading span { color: var(--accent); font-size: 11px; font-weight: 700; }
+
+.highlights {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  display: grid;
+  gap: 2px;
+}
+
+.highlights span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--text);
+  background: transparent;
+  font-size: 14px;
+  font-size: 13px;
+  text-decoration: none;
+}
+@keyframes reveal { from { opacity: 0; transform: scale(1.03); } to { opacity: 1; transform: scale(1); } }
+
+.link:hover,
+.link:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--bg);
+  background: var(--text);
+  font-size: 13px;
+  transform: translateX(-50%);
+}
+
+.hint[hidden] {
+  display: none;
+}
+
+@media (max-width: 360px) {
+  .card {
+    padding: 28px 20px 22px;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
+}

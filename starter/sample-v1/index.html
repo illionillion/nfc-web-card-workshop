@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>山田太郎 | Web名刺</title>
+    <meta name="description" content="山田太郎のWeb名刺です。" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="profile">
+        <div class="profile-topline">
+          <p class="kicker">Web Card / 2026</p>
+          <span class="index-mark">01—03</span>
+        </div>
+        <div class="carousel" aria-label="山田太郎の写真">
+          <div class="carousel-track">
+            <img class="carousel-slide is-active" src="./assets/266370.jpg" alt="山田太郎の活動写真 1" />
+            <img class="carousel-slide" src="./assets/bar.png" alt="山田太郎の活動写真 2" />
+            <img class="carousel-slide" src="./assets/cafe.JPG" alt="山田太郎の活動写真 3" />
+          </div>
+          <button class="carousel-button carousel-button-prev" type="button" aria-label="前の写真">←</button>
+          <button class="carousel-button carousel-button-next" type="button" aria-label="次の写真">→</button>
+          <div class="carousel-dots" aria-label="写真を選択"></div>
+        </div>
+        <p class="eyebrow">Front-end engineer / Community host</p>
+        <h1>山田太郎</h1>
+        <p class="name-en">YAMADA TARO</p>
+        <p class="role">新卒2年目のフロントエンドエンジニア<br />赤羽ゆるもく会 主催</p>
+        <p class="tagline">つくることで、毎日を少しだけ面白く。</p>
+      </header>
+
+      <section class="section">
+        <div class="section-heading"><span>01</span><h2>About</h2></div>
+        <p>フロントエンドを中心に、使う人の体験まで考えたWebサービスを作っています。個人開発やコミュニティ運営を通して、技術と人が交わる場を増やしています。</p>
+      </section>
+
+      <section class="section">
+        <div class="section-heading"><span>02</span><h2>Highlights</h2></div>
+        <ul class="highlights">
+          <li>
+            <strong>伏せ太郎</strong>
+            <span>個人開発でサービスを制作・公開</span>
+          </li>
+          <li>
+            <strong>赤羽ゆるもく会</strong>
+            <span>技術と人が交わる勉強会を主催</span>
+          </li>
+          <li>
+            <strong>Conference / LT</strong>
+            <span>カンファレンスやLTに複数登壇</span>
+          </li>
+        </ul>
+      </section>
+
+      <nav class="links" aria-label="リンク">
+        <a class="link" href="https://fusely-app.pages.dev/" target="_blank" rel="noopener noreferrer"><span>伏せ太郎</span><span>↗</span></a>
+        <a class="link" href="https://illionillion-slides.pages.dev/" target="_blank" rel="noopener noreferrer"><span>Slides</span><span>↗</span></a>
+      </nav>
+    </main>
+
+    <p class="hint" id="copy-hint" hidden>コピーしました</p>
+    <script src="./script.js"></script>
+  </body>
+</html>
