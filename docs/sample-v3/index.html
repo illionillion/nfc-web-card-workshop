@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="山田太郎（仮名）のWeb名刺です。" />
+    <title>山田太郎（仮名） | フルスタックエンジニア</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="ticker ticker-top" aria-hidden="true">
+      <div class="ticker-track">ZERO TO ONE // TRY AGAIN // CREATE VALUE // ZERO TO ONE // TRY AGAIN // CREATE VALUE //</div>
+    </div>
+    <div class="ticker ticker-bottom" aria-hidden="true">
+      <div class="ticker-track">無限大ノ価値創造　///　MAKE THE NEXT MOVE　///　無限大ノ価値創造　///　MAKE THE NEXT MOVE　///</div>
+    </div>
+
+    <main class="card-shell">
+      <header class="identity">
+        <p class="eyebrow">INDEPENDENT SYSTEM / 2026</p>
+        <h1>山田<span>太郎</span><small>（仮名）</small></h1>
+        <p class="role">フリーランスエンジニア <i></i> フルスタック</p>
+      </header>
+
+      <section class="gallery" aria-label="山田太郎の写真">
+        <div class="gallery-frame">
+          <img class="slide is-active" src="./assets/266370.jpg" alt="山田太郎の活動写真 1" />
+          <img class="slide" src="./assets/bar.png" alt="山田太郎の活動写真 2" />
+          <img class="slide" src="./assets/cafe.JPG" alt="山田太郎の活動写真 3" />
+          <div class="image-index" aria-live="polite"><span id="current-slide">01</span> / 03</div>
+          <p class="image-label">FIELD NOTES<br />// ACTIVE</p>
+        </div>
+        <div class="gallery-controls">
+          <button class="arrow-button" type="button" data-direction="previous" aria-label="前の写真">←</button>
+          <div class="dots" role="tablist" aria-label="写真を選択">
+            <button class="dot is-active" type="button" role="tab" aria-label="写真 1" aria-selected="true"></button>
+            <button class="dot" type="button" role="tab" aria-label="写真 2" aria-selected="false"></button>
+            <button class="dot" type="button" role="tab" aria-label="写真 3" aria-selected="false"></button>
+          </div>
+          <button class="arrow-button" type="button" data-direction="next" aria-label="次の写真">→</button>
+        </div>
+      </section>
+
+      <section class="profile" aria-labelledby="profile-title">
+        <p class="section-mark">01 / PROFILE</p>
+        <h2 id="profile-title">ゼロイチを<br /><em>トライする。</em></h2>
+        <div class="profile-copy">
+          <p>課題解決のための個人開発を行っています。</p>
+          <p>身近な課題、社会課題の解を最短で見つけ出します。</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
