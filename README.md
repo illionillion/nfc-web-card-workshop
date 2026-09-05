@@ -50,6 +50,8 @@ nfc-web-card-workshop/
 4. [guide/00-自己紹介メモ.md](./guide/00-自己紹介メモ.md) を開いて3分で埋める
 5. Copilot チャット（Agent）でメモを貼りながら `/web-card` を送る
 
+   モデルは GPT 系を推奨（必須ではない。他モデルも試してよい）。
+
    ```
    /web-card
 
